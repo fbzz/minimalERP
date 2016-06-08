@@ -1,0 +1,44 @@
+<body>
+  <section layout="row" flex>
+    <md-sidenav class="md-sidenav-left md-whiteframe-z2" style="height: 100%; position: fixed; width: 380px" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+      <md-toolbar class="md-theme-indigo">
+        <h1 class="md-toolbar-tools">MovieCatalog</h1>
+      </md-toolbar>
+      <md-content layout-padding >
+               <md-input-container>
+        <label>You can enter SQL here:</label>
+        <input ng-model="query" >
+        <button class="md-raised md-primary md-button md-ink-ripple" type="button" ng-click="sqlFunction()" ng-transclude="" aria-label="Primary"><span class="ng-scope">Execute</span><div class="md-ripple-container"></div></button>
+            <button ng-if="role == 1" class="md-raised md-primary md-button md-ink-ripple" type="button" ng-click="adminButton()" ng-transclude="" aria-label="Primary"><span class="ng-scope">Admin</span><div class="md-ripple-container"></div></button>
+      </md-input-container>
+
+      
+      </md-content>
+    </md-sidenav>
+       <div id="justColumn" style="font">
+       <font color="white"> BLALBPAKDIFSAJIDJSAIDSAJIDSAJOIFSAJOIFJSAOIF</font>
+      </div>
+       <div >
+         <div id="div_1"style="position: relative" ng-repeat="movie in data">
+    <md-card>
+        <md-card-title>
+          <md-card-title-text id="mdcard_1">
+         <center>   <span class="md-headline">Titulo: {{movie.movie_name}}</span></center>
+            <md-divider ></md-divider>
+            <BR/>
+            <span class="md-subhead">About: {{movie.movie_about}}
+</span>
+<span class="md-body-2">Tipo: {{movie.movie_type}}</span>
+<span class="md-body-2">Ano: {{movie.movie_year}}</span>
+          </md-card-title-text>
+          <md-card-title-media>
+            <div class="md-media-lg card-media"></div>
+          </md-card-title-media>
+        </md-card-title>
+        <md-card-actions layout="row" layout-align="end center" class="layout-align-end-center layout-row">
+<button class="md-button md-ink-ripple" type="button" ng-transclude="" aria-label="Action 1" ng-click="expand()"><span class="ng-scope">Read more...</span><div class="md-ripple-container"></div></button>
+        </md-card-actions>
+      </md-card>
+      </div>
+
+</body>

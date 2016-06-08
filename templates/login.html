@@ -1,0 +1,23 @@
+<body>
+
+ <br/>
+  <md-content class="autoScroll">
+    <md-input-container class="md-icon-float md-block">
+      <!-- Use floating label instead of placeholder -->
+      <label>Name</label>
+      <md-icon md-svg-src="" class="name"></md-icon>
+      <input ng-model="logon" type="text">
+    </md-input-container>
+    <md-input-container md-no-float class="md-block">
+     <label>Password</label>
+      <md-icon md-svg-src=""></md-icon>
+      <input ng-model="password" type="text" >
+    </md-input-container>
+    <md-input-container class="md-block">
+    </md-input-container>
+    <center>
+    <button class="md-raised md-primary md-button md-ink-ripple" type="button" ng-click="login()" ng-transclude="" aria-label="Primary"><span class="ng-scope">Login</span><div class="md-ripple-container"></div></button>
+    </center>
+  </md-content>
+
+</body>

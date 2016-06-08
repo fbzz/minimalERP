@@ -1,0 +1,14 @@
+<body>
+  <div ui-grid="gridOptions"  ui-grid-selection ui-grid-exporter ui-grid-move-columns class="grid"></div>
+   <md-input-container style="width: 1000px">
+        <label>SQL (Caution here you can make anything):</label>
+        <input ng-model="query" >
+        <button class="md-raised md-primary md-button md-ink-ripple" type="button" ng-click="sqlFunction()" ng-transclude="" aria-label="Primary"><span class="ng-scope">Execute</span><div class="md-ripple-container"></div></button>
+         <button class="md-raised md-primary md-button md-ink-ripple" type="button" ng-click="renewTable()" ng-transclude="" aria-label="Primary"><span class="ng-scope"> Renew Table(When add a new column or just reset)</span><div class="md-ripple-container"></div></button>
+           <button class="md-raised md-primary md-button md-ink-ripple" type="button" ng-click="renewTable()" ng-transclude="" aria-label="Primary"><span class="ng-scope"> Back to normal view</span><div class="md-ripple-container"></div></button>
+      </md-input-container>
+      <select ng-model="query">
+      	<option ng-repeat="query in querys track by $index" value="{{query.field}}">{{query.field}}</option>
+
+      </select>
+</body>
